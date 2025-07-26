@@ -1,0 +1,228 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  background-color:black;
+  color: white;
+}
+
+.nav-item a:hover {
+  cursor: pointer;
+  background-color:grey;
+    color: white;
+}
+
+.nav-bar {
+  align-items: center;
+  text-align: center;
+  color: white;
+  text-decoration: none;  
+   opacity: 0;
+  transform: scale(0.8);
+  animation: PopIn 0.6s ease-out forwards;
+}
+
+@keyframes PopIn{
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.col-md-3
+{
+  background-color: rgb(4, 4, 85);
+  color:white;
+  border-radius: 10px;
+}
+.col-md-3 :hover{
+    color: grey;
+  font-weight: 900;
+  transform: translateY(-5px);
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.footer-content > div {
+  flex: 1 1 250px;
+  margin: 20px;
+}
+
+.footer-content h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color:black;
+}
+
+
+.footer-content a {
+  color:black;
+  font-size: 15px;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.footer-content  a:hover {
+  color:grey;
+  text-decoration: underline;
+  
+  font-weight: 900;
+   transform: translateY(-5px);
+}
+.footer-links h3:hover {
+  color:grey;
+  font-weight: bold;
+  
+   transform: translateY(-5px);
+}
+
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 5px;
+}
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 30px;
+  color:black;
+  border-radius: 10px;
+    opacity: 0;
+  transform: scale(0.8);
+  animation: popIn 0.6s ease-out forwards;
+}
+
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.footer-bottom p {
+  font-size: medium;
+  color:black;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  width: 100%;
+  height: 100px;
+  color:black;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.footer-bottom p:hover {
+  color: grey;
+  font-weight: 900;
+  transform: translateY(-5px);
+}
+
+.icons:hover {
+  color:grey;
+  font-weight: 900;
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .body {
+    overflow: hidden;
+  }
+.about-section .row,
+  .team-section .row {
+    text-align: center;
+  }
+
+  .about-section img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  
+
+  .team-section img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .mission-section p {
+    font-size: 1rem;
+  }
+
+  .marquee-text h4 {
+    font-size: 1rem;
+  }
+
+  .footer-bottom {
+    padding: 15px;
+  }
+
+  .footer-bottom .icons a {
+    font-size: 15px;
+  }
+
+  .footer-bottom p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .body {
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+ .marquee-text h4 {
+    font-size: 0.9rem;
+  }
+
+  .about-section p,
+  .mission-section p {
+    font-size: 0.95rem;
+  }
+
+  .team-section img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .team-section h5 {
+    font-size: 1rem;
+  }
+  .footer-bottom .icons {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .footer-bottom .icons a {
+    font-size: 8px;
+  }
+
+  .footer-bottom p {
+    font-size: 15px;
+  }
+}
+
+
+
+
+  
