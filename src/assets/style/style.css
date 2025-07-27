@@ -568,3 +568,61 @@ agri-gradient {
   font-size: 0.95rem;
   border-radius: 10px;
 }
+
+@media (max-width: 768px) {
+  .responsive-lead-table {
+    overflow-x: auto;
+  }
+
+  .responsive-lead-table table {
+    font-size: 0.9rem;
+    min-width: 600px;
+  }
+
+  .responsive-lead-table th,
+  .responsive-lead-table td {
+    white-space: nowrap;
+  }
+
+  .responsive-lead-table .btn-sm {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.6rem;
+  }
+
+  .responsive-lead-table .badge {
+    font-size: 0.75rem;
+    padding: 0.4em 0.6em;
+  }
+}
+
+/* Mobile View (≤480px) */
+@media (max-width: 480px) {
+  .responsive-lead-table {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .responsive-lead-table table {
+    font-size: 0.8rem;
+    min-width: 650px;
+  }
+
+  .responsive-lead-table th,
+  .responsive-lead-table td {
+    padding: 0.4rem 0.6rem;
+  }
+
+  .responsive-lead-table .btn-sm {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .responsive-lead-table .badge {
+    font-size: 0.7rem;
+    padding: 0.35em 0.5em;
+  }
+
+  .responsive-lead-table .btn-danger {
+    white-space: nowrap;
+  }
+}

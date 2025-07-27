@@ -201,48 +201,75 @@ Reach more farmers and dealers. Manage leads, supply, and support with one simpl
 
         {/* Lead List */}
         <div className="card shadow-sm p-3">
-          <h5>Lead List</h5>
-          <div className="table-responsive mt-3">
-            <table className="table table-bordered">
-              <thead className="table-light">
-                <tr>
-                  <th>#</th>
-                  <th>Name</th>
-                  <th>Contact</th>
-                  <th>Region</th>
-                  <th>Status</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                {leads.length === 0 ? (
-                  <tr>
-                    <td colSpan="6" className="text-center">No leads found.</td>
-                  </tr>
-                ) : (
-                  leads.map((lead, index) => (
-                    <tr key={lead.id}>
-                      <td>{index + 1}</td>
-                      <td>{lead.name}</td>
-                      <td>{lead.contact}</td>
-                      <td>{lead.region}</td>
-                      <td><span className={`badge bg-${lead.status === 'New' ? 'warning' : 'info'}`}>{lead.status}</span></td>
-                      <td>
-                        <button
-                          className="btn btn-sm btn-danger"
-                          onClick={() => deleteLead(lead.id)}
-                        >
-                          🗑 Delete
-                        </button>
-                      </td>
-                    </tr>
-                  ))
-                )}
-              </tbody>
-            </table>
+  <h5>Lead List</h5>
+
+  {/* Table for tablet & desktop */}
+  <div className="table-responsive responsive-lead-table mt-3 d-none d-md-block">
+    <table className="table table-bordered">
+      <thead className="table-light">
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Contact</th>
+          <th>Region</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {leads.length === 0 ? (
+          <tr>
+            <td colSpan="6" className="text-center">No leads found.</td>
+          </tr>
+        ) : (
+          leads.map((lead, index) => (
+            <tr key={lead.id}>
+              <td>{index + 1}</td>
+              <td>{lead.name}</td>
+              <td>{lead.contact}</td>
+              <td>{lead.region}</td>
+              <td><span className={`badge bg-${lead.status === 'New' ? 'warning' : 'info'}`}>{lead.status}</span></td>
+              <td>
+                <button
+                  className="btn btn-sm btn-danger"
+                  onClick={() => deleteLead(lead.id)}
+                >
+                  🗑 Delete
+                </button>
+              </td>
+            </tr>
+          ))
+        )}
+      </tbody>
+    </table>
+  </div>
+
+  {/* Card layout for mobile */}
+  <div className="lead-cards d-block d-md-none mt-3">
+    {leads.length === 0 ? (
+      <p className="text-center">No leads found.</p>
+    ) : (
+      leads.map((lead, index) => (
+        <div className="card mb-3 shadow-sm p-3" key={lead.id}>
+          <div className="d-flex justify-content-between">
+            <h6 className="fw-bold mb-2">{index + 1}. {lead.name}</h6>
+            <span className={`badge bg-${lead.status === 'New' ? 'warning' : 'info'}`}>{lead.status}</span>
           </div>
+          <p className="mb-1"><strong>Contact:</strong> {lead.contact}</p>
+          <p className="mb-2"><strong>Region:</strong> {lead.region}</p>
+          <button
+            className="btn btn-sm btn-danger w-100"
+            onClick={() => deleteLead(lead.id)}
+          >
+            🗑 Delete
+          </button>
         </div>
-      </div>
+      ))
+    )}
+  </div>
+</div>
+</div>
+
 
 
 
